@@ -14,16 +14,16 @@ def fizzbuzz(intList):
     '''
 
     outList=[]
-#path to check 3, then 5
+    #path to check 3, then 5
     for i in intList:
         if i%3==0:
             outList.append("Fizz")
             if i%5==0:
                 outList[-1]="FizzBuzz"
-#path to check 5, but not 3:
+        #path to check 5, but not 3:
         elif i%5==0:
             outList.append("Buzz")
-#if not 5 nr 3:
+        #if not 5 nr 3:
         else:
             outList.append(i)
     print(outList)
