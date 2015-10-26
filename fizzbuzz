@@ -1,0 +1,32 @@
+'''
+goal to write a small program. Input is a list of integers( intList), output is a new list with some items replaced.
+replace rules: if the item is divisible by 3, replace it with Fizz, if it is divisible by 5, replace it with Buzz,
+if it's divisible by both 3 an 5, replace it with FizzBuzz.
+return a list.
+'''
+
+def fizzbuzz(intList):
+
+    '''
+    for every item in the list check if it's divisible by 3. if yes, check if it's divisible by 5 too. otherwise,
+    check if it's divisible by 5. This way, all conditions checked. If none applies, copy the corresponding item from
+    the original list.
+    '''
+
+    outList=[]
+#path to check 3, then 5
+    for i in intList:
+        if i%3==0:
+            outList.append("Fizz")
+            if i%5==0:
+                outList[-1]="FizzBuzz"
+#path to check 5, but not 3:
+        elif i%5==0:
+            outList.append("Buzz")
+#if not 5 nr 3:
+        else:
+            outList.append(i)
+    print(outList)
+
+#to test the program
+fizzbuzz([10,1,23,54,2,7,88,15,2,3,30,234234,5])
